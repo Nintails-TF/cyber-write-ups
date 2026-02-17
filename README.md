@@ -1,3 +1,7 @@
+---
+date created: Tuesday, February 17th 2026, 5:54:59 pm
+date modified: Tuesday, February 17th 2026, 6:29:02 pm
+---
 # My Security Writeups
 
 A collection of writeups for HackTheBox machines and CTF challenges.
@@ -5,9 +9,9 @@ A collection of writeups for HackTheBox machines and CTF challenges.
 ## About Me
 I'm Alex, developing both my Blue and Red teaming skils.
 
-LinkedIn: https://www.linkedin.com/in/alex-glen-59105825b/
+**LinkedIn:** https://www.linkedin.com/in/alex-glen-59105825b/
 
-Twitter/X: https://x.com/Nintails2 
+**Twitter/X:** https://x.com/Nintails2 
 
 ---
 
