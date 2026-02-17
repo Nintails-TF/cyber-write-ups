@@ -10,6 +10,8 @@ date: 2026-02-17
 type: CTF
 ---
 
+<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
+
 # PicoGym: Hidden in Plainsight
 
 **Category:** Forensics
@@ -27,7 +29,8 @@ type: CTF
 > You’re given a seemingly ordinary JPG image. Something is tucked away out of sight inside the file. Your task is to discover the hidden payload and extract the flag. Download the jpg image **here.**
 
 **Files provided:** `img.jpg`
-**URL:** https://play.picoctf.org/practice/challenge/524 
+
+**URL:** (https://play.picoctf.org/practice/challenge/52)
 
 ---
 
@@ -81,6 +84,7 @@ I've heard of [Steghide](https://steghide.sourceforge.net/documentation/manual.p
 ```Bash
 steghide extract -sf img.jpg -p pAzzword
 ```
+Use -sf to define the stego-file. Here, we use it to extract data from img.jpg.
 
 Steghide then gives us a file called `flag.txt`:
 ```Bash
