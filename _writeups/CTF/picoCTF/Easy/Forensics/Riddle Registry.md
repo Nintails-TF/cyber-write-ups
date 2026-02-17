@@ -11,11 +11,16 @@ type: CTF
 
 ---
 
+<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
+
 # PicoGym - Riddle Registry:
 
 **Category:** *Forensics*
+
 **Author:** *Prince Niyonshuti N.* 
+
 **Difficulty:** *Easy* 
+
 **Date:** *17-02-2026*
 
 ---
@@ -71,7 +76,7 @@ Author                          : cGljb0NURntwdXp6bDNkX20zdGFkYXRhX2YwdW5kIV9jOT
 
 ## Decryption:
 
-I recognised the author name as being base64 encoded. So I hopped over to https://gchq.github.io/CyberChef/ to quickly decode the string.
+I recognised the author name as being base64 encoded. So I hopped over to [Cyber Chef](https://gchq.github.io/CyberChef/) to quickly decode the string.
 
 Alternatively, you could also use `base64` within the terminal to decode the flag.
 
