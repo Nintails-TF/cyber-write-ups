@@ -1,6 +1,14 @@
 ---
 date created: Tuesday, February 17th 2026, 9:11:39 pm
 date modified: Tuesday, February 17th 2026, 10:19:20 pm
+layout: default
+title: Riddle Registry
+category: Forensics
+event: PicoGym
+difficulty: Easy
+date: 2026-02-17
+type: CTF
+
 ---
 
 # PicoGym - Riddle Registry:
@@ -8,7 +16,7 @@ date modified: Tuesday, February 17th 2026, 10:19:20 pm
 **Category:** *Forensics*
 **Author:** *Prince Niyonshuti N.* 
 **Difficulty:** *Easy* 
-**Date:** *2025-02-17*
+**Date:** *17-02-2026*
 
 ---
 

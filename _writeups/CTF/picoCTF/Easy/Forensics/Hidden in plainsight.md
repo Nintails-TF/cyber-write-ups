@@ -1,6 +1,13 @@
 ---
 date created: Tuesday, February 17th 2026, 9:55:45 pm
 date modified: Tuesday, February 17th 2026, 10:32:58 pm
+layout: default
+title: Hidden in Plainsight
+category: Forensics
+event: PicoGym
+difficulty: Easy
+date: 2026-02-17
+type: CTF
 ---
 
 # PicoGym: Hidden in Plainsight
@@ -11,7 +18,7 @@ date modified: Tuesday, February 17th 2026, 10:32:58 pm
 
 **Difficulty:** Easy
 
-**Date:** 2025-02-17
+**Date:** 17/02/26
 
 ---
 
