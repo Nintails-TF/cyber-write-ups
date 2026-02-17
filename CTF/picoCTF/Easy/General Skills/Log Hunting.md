@@ -3,7 +3,7 @@ date created: Tuesday, February 17th 2026, 6:04:46 pm
 date modified: Tuesday, February 17th 2026, 7:47:26 pm
 ---
 
-<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a
+<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
 
 # PicoGym - Log Hunting:
 
