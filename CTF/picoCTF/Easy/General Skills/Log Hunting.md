@@ -59,6 +59,7 @@ grep "INFO FLAGPART" server.log
 [1990-08-09 10:10:54] INFO FLAGPART: cedfa5fb}
 [1990-08-09 10:10:58] INFO FLAGPART: cedfa5fb}
 [1990-08-09 10:11:06] INFO FLAGPART: cedfa5fb}
+...SNIP...
 ```
 
 ### Step 3: Enhancing Our `grep` Usage:
