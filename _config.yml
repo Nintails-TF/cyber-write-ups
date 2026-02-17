@@ -4,3 +4,4 @@ plugins:
 
 title: My Security Writeups
 description: Infosec writeups by Nintails
+baseurl: "/cyber-write-ups"
