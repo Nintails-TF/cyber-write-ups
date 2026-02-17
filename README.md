@@ -27,6 +27,6 @@ Twitter/X: https://x.com/Nintails2
 
 | Event | Challenge | Category | Date |
 |---|---|---|---|
-| [EventName 2025](ctf/eventname-2025/challenge1.md) | ChallengeTitle | Web | 2025-01-15 |
+| [picoGym](ctf/eventname-2025/challenge1.md) | ChallengeTitle | Web | 2025-01-15 |
 
 ---
