@@ -31,7 +31,7 @@ type: CTF
 
 **Files provided:** `confidential.pdf`
 
-**URL:** https://play.picoctf.org/practice/challenge/530
+**URL:** <https://play.picoctf.org/practice/challenge/530>
 
 ---
 
