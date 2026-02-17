@@ -1,0 +1,18 @@
+---
+---
+
+@import "jekyll-theme-cayman";
+
+.btn-home {
+  color: #159957;
+  border: 2px solid #159957;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-home:hover {
+  background-color: #159957;
+  color: white;
+}
