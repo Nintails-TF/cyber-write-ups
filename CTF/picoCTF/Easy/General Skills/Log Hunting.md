@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, February 17th 2026, 6:04:46 pm
-date modified: Tuesday, February 17th 2026, 7:24:01 pm
+date modified: Tuesday, February 17th 2026, 7:26:46 pm
 ---
 # PicoGym - Log Hunting:
 
@@ -78,6 +78,7 @@ The `$NF` is a built in function that counts the number of words within the curr
 | `$3`      | `INFO`             | The log level            |
 | `$4`      | `FLAGPART:`        | The label                |
 | `$5`      | **`picoCTF{us3_`** | **The actual flag part** |
+
 So since we've got 5 fields, our `$NF` = 5. So by performing `{print $NF}` we print the last word in the string basically. 
 
 3. Remove any duplicates
@@ -97,7 +98,7 @@ Apple
 Orange
 Apple
 ```
-Since orange separates the apple, the duplicate will not be removed, as it is not adjacent. 
+Since orange separates the apple, **the duplicate will not be removed**, as it is not adjacent. 
 
 However we can fix this problem by first sorting the list:
 ```Bash
