@@ -3,6 +3,8 @@ date created: Tuesday, February 17th 2026, 6:04:46 pm
 date modified: Tuesday, February 17th 2026, 7:47:26 pm
 ---
 
+[← Back to Home](/)
+
 # PicoGym - Log Hunting:
 
 **Category:** *General Skills*
