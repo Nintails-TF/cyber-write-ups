@@ -3,5 +3,5 @@ plugins:
   - jekyll-remote-theme
 
 title: My Security Writeups
-description: Infosec writeups by Nintails
+description: Infosec writeups by Alex
 baseurl: "/cyber-write-ups"
