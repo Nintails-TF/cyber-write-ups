@@ -20,17 +20,40 @@ I'm Alex, developing both my Blue and Red teaming skills.
 ---
 
 ## HackTheBox
-
-| Machine | Category | Difficulty | Date |
-|---------|----------|------------|------|
-{% for writeup in site.writeups %}{% if writeup.type == "HTB" %}
-| [{{ writeup.title }}]({{ site.baseurl }}{{ writeup.url }}) | {{ writeup.category }} | {{ writeup.difficulty }} | {{ writeup.date | date: "%d/%m/%Y" }} |
-{% endif %}{% endfor %}
+<table>
+  <thead>
+    <tr><th>Machine</th><th>Category</th><th>Difficulty</th><th>Date</th></tr>
+  </thead>
+  <tbody>
+    {% for writeup in site.writeups %}
+      {% if writeup.type == "HTB" %}
+      <tr>
+        <td><a href="{{ site.baseurl }}{{ writeup.url }}">{{ writeup.title }}</a></td>
+        <td>{{ writeup.category }}</td>
+        <td>{{ writeup.difficulty }}</td>
+        <td>{{ writeup.date | date: "%d/%m/%Y" }}</td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
 
 ## CTF Writeups
-
-| Challenge | Event | Category | Difficulty | Date |
-|-----------|-------|----------|------------|------|
-{% for writeup in site.writeups %}{% if writeup.type == "CTF" %}
-| [{{ writeup.title }}]({{ site.baseurl }}{{ writeup.url }}) | {{ writeup.event }} | {{ writeup.category }} | {{ writeup.difficulty }} | {{ writeup.date | date: "%d/%m/%Y" }} |
-{% endif %}{% endfor %}
+<table>
+  <thead>
+    <tr><th>Challenge</th><th>Event</th><th>Category</th><th>Difficulty</th><th>Date</th></tr>
+  </thead>
+  <tbody>
+    {% for writeup in site.writeups %}
+      {% if writeup.type == "CTF" %}
+      <tr>
+        <td><a href="{{ site.baseurl }}{{ writeup.url }}">{{ writeup.title }}</a></td>
+        <td>{{ writeup.event }}</td>
+        <td>{{ writeup.category }}</td>
+        <td>{{ writeup.difficulty }}</td>
+        <td>{{ writeup.date | date: "%d/%m/%Y" }}</td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
