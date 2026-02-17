@@ -1,6 +1,11 @@
 ---
-date created: Tuesday, February 17th 2026, 6:04:46 pm
-date modified: Tuesday, February 17th 2026, 7:47:26 pm
+layout: default
+title: Log Hunting
+category: General Skills
+event: PicoGym
+difficulty: Easy
+date: 2026-02-17
+type: CTF
 ---
 
 <a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>

@@ -19,22 +19,16 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 ## HackTheBox
 
-### Easy
-| Machine | OS | Date |
-|---|---|---|
-| [MachineName](htb/easy/machinename.md) | Linux | 2025-01-01 |
-
-### Medium
-| Machine | OS | Date |
-|---|---|---|
-| [MachineName](htb/medium/machinename.md) | Windows | 2025-02-01 |
-
----
+| Machine | Category | Difficulty | Date |
+|---------|----------|------------|------|
+{% for writeup in site.writeups %}{% if writeup.type == "HTB" %}
+| [{{ writeup.title }}]({{ site.baseurl }}{{ writeup.url }}) | {{ writeup.category }} | {{ writeup.difficulty }} | {{ writeup.date | date: "%d/%m/%Y" }} |
+{% endif %}{% endfor %}
 
 ## CTF Writeups
 
-| Event   | Challenge       | Category       | Date     |
-| ------- | --------------- | -------------- | -------- |
-| PicoGym | [Log Hunting](CTF/picoCTF/Easy/General%20Skills/Log%20Hunting) | General Skills | 17/02/26 |
-
----
+| Challenge | Event | Category | Difficulty | Date |
+|-----------|-------|----------|------------|------|
+{% for writeup in site.writeups %}{% if writeup.type == "CTF" %}
+| [{{ writeup.title }}]({{ site.baseurl }}{{ writeup.url }}) | {{ writeup.event }} | {{ writeup.category }} | {{ writeup.difficulty }} | {{ writeup.date | date: "%d/%m/%Y" }} |
+{% endif %}{% endfor %}
