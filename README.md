@@ -2,6 +2,7 @@
 date created: Tuesday, February 17th 2026, 5:54:59 pm
 date modified: Tuesday, February 17th 2026, 7:27:38 pm
 layout: default
+{% include_relative README.md %}
 ---
 
 # My Security Writeups
