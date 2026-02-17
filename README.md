@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, February 17th 2026, 5:54:59 pm
-date modified: Tuesday, February 17th 2026, 7:27:38 pm
+date modified: Tuesday, February 17th 2026, 7:37:39 pm
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 A collection of writeups for HackTheBox machines and CTF challenges.
 
 ## About Me
-I'm Alex, developing both my Blue and Red teaming skils.
+I'm Alex, developing both my Blue and Red teaming skills.
 
 **LinkedIn:** https://www.linkedin.com/in/alex-glen-59105825b/
 

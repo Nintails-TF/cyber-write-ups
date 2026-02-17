@@ -5,8 +5,11 @@ date modified: Tuesday, February 17th 2026, 7:26:46 pm
 # PicoGym - Log Hunting:
 
 **Category:** *General Skills*
+
 **Author:** *Yahaya Meddy*
+
 **Difficulty:** *Easy*
+
 **Date:** *17/02/2026*
 
 ---
@@ -16,6 +19,7 @@ date modified: Tuesday, February 17th 2026, 7:26:46 pm
 > Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag? Download the **logs** and figure out the full flag from the fragments.
 
 **Files provided:** `server.log (ASCII text)` 
+
 **URL:** https://play.picoctf.org/practice/challenge/527
 
 ---
@@ -69,7 +73,9 @@ This statement can be broken down as the following:
 2. Strip the date, time, flagpart, only return the actual flag.
 	1. `awk '{print $NF}'`
 
-The `$NF` is a built in function that counts the number of words within the current line. **So it splits** fields by spaces. If we take the following phrase: `[1990-08-09 10:00:10] INFO FLAGPART: picoCTF{us3_` for example:
+The `$NF` is a built in function that counts the number of words within the current line. So it splits fields by spaces. If we take the following phrase: `[1990-08-09 10:00:10] INFO FLAGPART: picoCTF{us3_` 
+
+For example:
 
 | **Field** | **Content**        | **Description**          |
 | --------- | ------------------ | ------------------------ |
@@ -115,6 +121,7 @@ Now we can see that all duplicates have been removed, since our list was sorted 
 5. Finally, strip all new line characters
 	1. `tr -d '\n'` (transform by deleting, all newline character)
 	2. This ensures that our flag doesn't turn into a vertical list.
+
 ## Flag:
 
 ```Plaintext
