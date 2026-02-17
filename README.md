@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, February 17th 2026, 5:54:59 pm
-date modified: Tuesday, February 17th 2026, 6:29:02 pm
+date modified: Tuesday, February 17th 2026, 7:27:38 pm
 ---
 # My Security Writeups
 
@@ -31,8 +31,8 @@ I'm Alex, developing both my Blue and Red teaming skils.
 
 ## CTF Writeups
 
-| Event | Challenge | Category | Date |
-|---|---|---|---|
-| [picoGym](<picoGym>) | [Log Hunting](<picoGym/Easy/General Skills/Log Hunting>) | General Skills | 17/02/26 |
+| Event   | Challenge       | Category       | Date     |
+| ------- | --------------- | -------------- | -------- |
+| PicoGym | [[Log Hunting]] | General Skills | 17/02/26 |
 
 ---
