@@ -29,6 +29,6 @@ Twitter/X: https://x.com/Nintails2
 
 | Event | Challenge | Category | Date |
 |---|---|---|---|
-| [picoGym](<picoGym/Easy/General Skills/Log Hunting>) | Log Hunting | General Skills | 17/02/26 |
+| [picoGym](<picoGym>) | [Log Hunting](<picoGym/Easy/General Skills/Log Hunting>) | General Skills | 17/02/26 |
 
 ---
