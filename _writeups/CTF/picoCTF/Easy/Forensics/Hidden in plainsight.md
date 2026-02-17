@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, February 17th 2026, 9:55:45 pm
-date modified: Tuesday, February 17th 2026, 10:32:58 pm
+date modified: Tuesday, February 17th 2026, 10:50:22 pm
 layout: default
 title: Hidden in Plainsight
 category: Forensics
@@ -104,5 +104,5 @@ picoCTF{h1dd3n_1n_1m4g3_f051f2e8}
 
 ## Lessons Learned:
 
-- Using basictools like `exiftools` to look at data helps lots with basic forensics and exercises.
-- Data can be encoded multiple times, so it's worthwhile to keep that in mind.
+- Using basictools like `exiftools` to examine metadata is highly effective for forensic exercises; it should always be the **first port of call**.
+- Data can be encoded multiple times, so it is vital to stay persistent. This serves as a reminder that **security through obfuscation** is a poor security practice.
