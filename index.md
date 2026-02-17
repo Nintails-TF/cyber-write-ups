@@ -15,6 +15,8 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 **Twitter/X:** https://x.com/Nintails2 
 
+**Email:** AlexanderCharlesGlen@gmail.com
+
 ---
 
 ## HackTheBox
