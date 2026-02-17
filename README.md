@@ -4,7 +4,9 @@ A collection of writeups for HackTheBox machines and CTF challenges.
 
 ## About Me
 I'm Alex, developing both my Blue and Red teaming skils.
+
 LinkedIn: https://www.linkedin.com/in/alex-glen-59105825b/
+
 Twitter/X: https://x.com/Nintails2 
 
 ---
@@ -27,6 +29,6 @@ Twitter/X: https://x.com/Nintails2
 
 | Event | Challenge | Category | Date |
 |---|---|---|---|
-| [picoGym](ctf/eventname-2025/challenge1.md) | ChallengeTitle | Web | 2025-01-15 |
+| [picoGym](<picoGym/Easy/General Skills/Log Hunting>) | Log Hunting | General Skills | 17/02/26 |
 
 ---
