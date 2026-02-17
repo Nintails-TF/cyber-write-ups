@@ -1,7 +1,9 @@
 ---
 date created: Tuesday, February 17th 2026, 5:54:59 pm
 date modified: Tuesday, February 17th 2026, 7:27:38 pm
+layout: default
 ---
+
 # My Security Writeups
 
 A collection of writeups for HackTheBox machines and CTF challenges.
@@ -33,6 +35,6 @@ I'm Alex, developing both my Blue and Red teaming skils.
 
 | Event   | Challenge       | Category       | Date     |
 | ------- | --------------- | -------------- | -------- |
-| PicoGym | [[Log Hunting]] | General Skills | 17/02/26 |
+| PicoGym | [Log Hunting](CTF/picoCTF/Easy/General%20Skills/Log%20Hunting) | General Skills | 17/02/26 |
 
 ---
