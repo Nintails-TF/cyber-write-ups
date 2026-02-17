@@ -30,7 +30,7 @@ type: CTF
 
 **Files provided:** `img.jpg`
 
-**URL:** (https://play.picoctf.org/practice/challenge/52)
+**URL:** <https://play.picoctf.org/practice/challenge/52>
 
 ---
 
