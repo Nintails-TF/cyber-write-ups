@@ -1,5 +1,6 @@
 ---
 title: "Log Hunting"
+layout: default
 platform: "PicoGym"
 category: "General Skills"
 difficulty: "Easy"
@@ -7,7 +8,7 @@ os: "Linux"
 featured: true
 tags: []
 date created: Tuesday, February 17th 2026, 6:04:46 pm
-date modified: Thursday, February 19th 2026, 1:47:38 pm
+date modified: Thursday, February 19th 2026, 1:54:11 pm
 ---
 
 <a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>

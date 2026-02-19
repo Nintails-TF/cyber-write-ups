@@ -1,7 +1,7 @@
 ---
 date created: Tuesday, February 17th 2026, 9:11:39 pm
 date modified: Tuesday, February 17th 2026, 10:19:20 pm
-
+layout: default
 title: Riddle Registry
 platform: PicoGym
 category: Forensics

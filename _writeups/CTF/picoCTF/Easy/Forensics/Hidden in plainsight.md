@@ -2,6 +2,7 @@
 date created: Tuesday, February 17th 2026, 9:55:45 pm
 date modified: Tuesday, February 17th 2026, 10:55:16 pm
 title: "Hidden in Plainsight"
+layout: default
 platform: "PicoGym"
 category: "Forensics"
 difficulty: "Easy"
