@@ -1,0 +1,381 @@
+---
+layout: default
+title: Writeup Index
+---
+
+<style>
+  .writeup-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .writeup-controls input[type="text"] {
+    flex: 1 1 100%;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.95rem;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    background: #fafbfc;
+    color: #24292e;
+    transition: border-color 0.2s;
+  }
+
+  .writeup-controls input[type="text"]:focus {
+    outline: none;
+    border-color: #1e6bb8;
+    background: #fff;
+  }
+
+  .writeup-controls select {
+    flex: 1 1 calc(25% - 0.6rem);
+    min-width: 140px;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    background: #fafbfc;
+    color: #24292e;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .writeup-controls select:focus {
+    outline: none;
+    border-color: #1e6bb8;
+  }
+
+  .writeup-count {
+    font-size: 0.85rem;
+    color: #586069;
+    margin-bottom: 1rem;
+  }
+
+  .writeup-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .writeup-table th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid #1e6bb8;
+    color: #24292e;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .writeup-table th:hover {
+    color: #1e6bb8;
+  }
+
+  .writeup-table th .sort-arrow {
+    margin-left: 4px;
+    font-size: 0.7rem;
+    opacity: 0.4;
+  }
+
+  .writeup-table th.sorted .sort-arrow {
+    opacity: 1;
+  }
+
+  .writeup-table td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid #e1e4e8;
+    color: #24292e;
+  }
+
+  .writeup-table tr:hover td {
+    background: #f6f8fa;
+  }
+
+  .writeup-table a {
+    color: #1e6bb8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .writeup-table a:hover {
+    text-decoration: underline;
+  }
+
+  .difficulty-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .difficulty-easy { background: #dcffe4; color: #176f2c; }
+  .difficulty-medium { background: #fff8c5; color: #735c0f; }
+  .difficulty-hard { background: #ffdce0; color: #9e1c23; }
+  .difficulty-insane { background: #f0e0ff; color: #5a32a3; }
+
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #586069;
+    font-style: italic;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    background: #f1f3f5;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    color: #586069;
+  }
+
+  .clear-filters {
+    flex: 0 0 auto;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    background: #fafbfc;
+    color: #586069;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .clear-filters:hover {
+    border-color: #d73a49;
+    color: #d73a49;
+    background: #fff;
+  }
+</style>
+
+<h1>Writeup Index</h1>
+<p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+
+<div class="writeup-controls">
+  <input type="text" id="search" placeholder="Search by title, tags, or keyword..." autocomplete="off">
+  <select id="filter-platform"><option value="">All Platforms</option></select>
+  <select id="filter-difficulty"><option value="">All Difficulties</option></select>
+  <select id="filter-category"><option value="">All Categories</option></select>
+  <select id="filter-os"><option value="">All OS</option></select>
+  <button class="clear-filters" id="clear-btn">Clear</button>
+</div>
+
+<div class="writeup-count" id="count"></div>
+
+<table class="writeup-table">
+  <thead>
+    <tr>
+      <th data-sort="title">Title <span class="sort-arrow">▲</span></th>
+      <th data-sort="platform">Platform <span class="sort-arrow">▲</span></th>
+      <th data-sort="category">Category <span class="sort-arrow">▲</span></th>
+      <th data-sort="difficulty">Difficulty <span class="sort-arrow">▲</span></th>
+      <th data-sort="os">OS <span class="sort-arrow">▲</span></th>
+      <th data-sort="date_created">Date <span class="sort-arrow">▲</span></th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody id="writeup-body"></tbody>
+</table>
+
+<div class="no-results" id="no-results" style="display:none">No writeups match your filters.</div>
+
+<script>
+(function () {
+  let writeups = [];
+  let sortKey = 'date_created';
+  let sortAsc = false;
+
+  const difficultyOrder = { easy: 0, medium: 1, hard: 2, insane: 3 };
+
+  function loadData() {
+    fetch('{{ "/writeups.json" | relative_url }}')
+      .then(r => r.json())
+      .then(data => {
+        writeups = data;
+        populateFilters();
+        render();
+      })
+      .catch(err => {
+        console.error('Failed to load writeups.json:', err);
+        document.getElementById('no-results').style.display = 'block';
+        document.getElementById('no-results').textContent = 'Failed to load writeup data.';
+      });
+  }
+
+  function populateFilters() {
+    populate('filter-platform', 'platform');
+    populate('filter-difficulty', 'difficulty');
+    populate('filter-category', 'category');
+    populate('filter-os', 'os');
+  }
+
+  function populate(selectId, key) {
+    const sel = document.getElementById(selectId);
+    const vals = [...new Set(writeups.map(w => w[key]).filter(Boolean))].sort();
+    vals.forEach(v => {
+      const opt = document.createElement('option');
+      opt.value = v;
+      opt.textContent = v;
+      sel.appendChild(opt);
+    });
+  }
+
+  function getFiltered() {
+    const q = document.getElementById('search').value.toLowerCase().trim();
+    const plat = document.getElementById('filter-platform').value;
+    const diff = document.getElementById('filter-difficulty').value;
+    const cat = document.getElementById('filter-category').value;
+    const os = document.getElementById('filter-os').value;
+
+    return writeups.filter(w => {
+      if (plat && w.platform !== plat) return false;
+      if (diff && w.difficulty !== diff) return false;
+      if (cat && w.category !== cat) return false;
+      if (os && w.os !== os) return false;
+      if (q) {
+        const tags = Array.isArray(w.tags) ? w.tags.join(' ') : (w.tags || '');
+        const haystack = `${w.title} ${w.platform} ${w.category} ${tags}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  function sortData(data) {
+    return data.slice().sort((a, b) => {
+      let va = (a[sortKey] || '').toString().toLowerCase();
+      let vb = (b[sortKey] || '').toString().toLowerCase();
+
+      if (sortKey === 'difficulty') {
+        va = difficultyOrder[va] ?? 99;
+        vb = difficultyOrder[vb] ?? 99;
+        return sortAsc ? va - vb : vb - va;
+      }
+
+      if (sortKey === 'date_created') {
+        // Handle DD-MM-YYYY or YYYY-MM-DD
+        const da = parseDate(a.date_created);
+        const db = parseDate(b.date_created);
+        return sortAsc ? da - db : db - da;
+      }
+
+      if (va < vb) return sortAsc ? -1 : 1;
+      if (va > vb) return sortAsc ? 1 : -1;
+      return 0;
+    });
+  }
+
+  function parseDate(str) {
+    if (!str) return 0;
+    // Try DD-MM-YYYY
+    const dmy = str.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+    if (dmy) return new Date(dmy[3], dmy[2] - 1, dmy[1]).getTime();
+    // Try YYYY-MM-DD
+    const ymd = str.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (ymd) return new Date(ymd[1], ymd[2] - 1, ymd[3]).getTime();
+    // Try Obsidian long format
+    return new Date(str).getTime() || 0;
+  }
+
+  function diffBadge(d) {
+    if (!d) return '';
+    const cls = 'difficulty-' + d.toLowerCase();
+    return `<span class="difficulty-badge ${cls}">${d}</span>`;
+  }
+
+  function formatDate(str) {
+    const ms = parseDate(str);
+    if (!ms) return str || '';
+    const d = new Date(ms);
+    return d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '-');
+  }
+
+  function renderTags(tags) {
+    if (!tags) return '';
+    const arr = Array.isArray(tags) ? tags : tags.split(',').map(t => t.trim());
+    if (!arr.length) return '';
+    return '<div class="tag-list">' + arr.map(t => `<span class="tag">${t}</span>`).join('') + '</div>';
+  }
+
+  function render() {
+    const filtered = sortData(getFiltered());
+    const tbody = document.getElementById('writeup-body');
+    const noRes = document.getElementById('no-results');
+    const count = document.getElementById('count');
+
+    count.textContent = `Showing ${filtered.length} of ${writeups.length} writeup${writeups.length !== 1 ? 's' : ''}`;
+
+    if (!filtered.length) {
+      tbody.innerHTML = '';
+      noRes.style.display = 'block';
+      return;
+    }
+
+    noRes.style.display = 'none';
+    tbody.innerHTML = filtered.map(w => `
+      <tr>
+        <td><a href="${w.url}">${w.title}</a></td>
+        <td>${w.platform || ''}</td>
+        <td>${w.category || ''}</td>
+        <td>${diffBadge(w.difficulty)}</td>
+        <td>${w.os || ''}</td>
+        <td>${formatDate(w.date_created)}</td>
+        <td>${renderTags(w.tags)}</td>
+      </tr>
+    `).join('');
+
+    // Update sort arrows
+    document.querySelectorAll('.writeup-table th').forEach(th => {
+      th.classList.remove('sorted');
+      const arrow = th.querySelector('.sort-arrow');
+      if (arrow) arrow.textContent = '▲';
+      if (th.dataset.sort === sortKey) {
+        th.classList.add('sorted');
+        if (arrow) arrow.textContent = sortAsc ? '▲' : '▼';
+      }
+    });
+  }
+
+  // Event listeners
+  document.getElementById('search').addEventListener('input', render);
+  document.getElementById('filter-platform').addEventListener('change', render);
+  document.getElementById('filter-difficulty').addEventListener('change', render);
+  document.getElementById('filter-category').addEventListener('change', render);
+  document.getElementById('filter-os').addEventListener('change', render);
+
+  document.getElementById('clear-btn').addEventListener('click', () => {
+    document.getElementById('search').value = '';
+    document.getElementById('filter-platform').value = '';
+    document.getElementById('filter-difficulty').value = '';
+    document.getElementById('filter-category').value = '';
+    document.getElementById('filter-os').value = '';
+    render();
+  });
+
+  document.querySelectorAll('.writeup-table th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (sortKey === key) {
+        sortAsc = !sortAsc;
+      } else {
+        sortKey = key;
+        sortAsc = true;
+      }
+      render();
+    });
+  });
+
+  loadData();
+})();
+</script>

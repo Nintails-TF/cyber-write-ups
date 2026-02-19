@@ -1,0 +1,19 @@
+---
+layout: null
+---
+[
+  {% assign writeups = site.pages | where_exp: "page", "page.title and page.title != '' and page.platform and page.platform != ''" %}
+  {% for page in writeups %}
+  {
+    "title": {{ page.title | jsonify }},
+    "platform": {{ page.platform | jsonify }},
+    "category": {{ page.category | jsonify }},
+    "difficulty": {{ page.difficulty | jsonify }},
+    "os": {{ page.os | default: "" | jsonify }},
+    "date_created": {{ page.date_created | default: page.date | default: "" | jsonify }},
+    "featured": {{ page.featured | default: false | jsonify }},
+    "tags": {{ page.tags | default: "" | jsonify }},
+    "url": {{ page.url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
