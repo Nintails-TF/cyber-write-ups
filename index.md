@@ -27,7 +27,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 |---|---|
 | {{ writeups.size }} | {% assign platforms = writeups | map: "platform" | uniq %}{{ platforms | join: ", " }} |
 
-**[Browse All Writeups →](_writeups/)** — searchable index with filters.
+**[Browse All Writeups →](writeups/index.html)** — searchable index with filters.
 
 ---
 
