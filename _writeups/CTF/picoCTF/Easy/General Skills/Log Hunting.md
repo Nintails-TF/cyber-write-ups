@@ -29,7 +29,7 @@ date modified: Thursday, February 19th 2026, 1:54:11 pm
 
 **Files provided:** `server.log (ASCII text)` 
 
-**URL:** [https://play.picoctf.org/practice/challenge/527]
+**URL:** <https://play.picoctf.org/practice/challenge/527>
 
 ---
 
