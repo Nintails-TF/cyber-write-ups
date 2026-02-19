@@ -23,7 +23,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 ## 📊 Write-up Stats
 
-**{{ writeups.size }} writeups and counting!** [Browse them all →](browse/)
+**[{{ writeups.size }} writeups and counting!](browse/)** 
 
 {% if featured.size > 0 %}
 ## ⭐ Featured Writeups
@@ -45,4 +45,5 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 ---
 
-*See the full collection on the [Writeup Index](writeups/) page.*
+*See the full collection on the [Writeup Index](browse/) page.*
+
