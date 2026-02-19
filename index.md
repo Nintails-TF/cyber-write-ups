@@ -3,7 +3,8 @@ layout: default
 title: Security Writeups
 ---
 
-{% assign writeups = site.pages | where_exp: "page", "page.title and page.title != '' and page.platform and page.platform != ''" %}
+{% assign writeups = site.writeups | where_exp: "item", "item.title != ''" %}
+{% assign writeups = writeups | where_exp: "item", "item.platform != ''" %}
 {% assign featured = writeups | where: "featured", true %}
 {% assign sorted = writeups | sort: "date_created" | reverse %}
 
@@ -35,7 +36,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 | Title | Platform | Category | Difficulty |
 |---|---|---|---|
-{% for page in featured %}| [{{ page.title }}]({{ page.url | relative_url }}) | {{ page.platform }} | {{ page.category }} | {{ page.difficulty }} |
+{% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} |
 {% endfor %}
 
 ---
@@ -45,7 +46,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 | Title | Platform | Category | Difficulty | Date |
 |---|---|---|---|---|
-{% for page in sorted limit:3 %}| [{{ page.title }}]({{ page.url | relative_url }}) | {{ page.platform }} | {{ page.category }} | {{ page.difficulty }} | {{ page.date_created | date: "%d-%m-%Y" }} |
+{% for item in sorted limit:3 %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date_created }} |
 {% endfor %}
 
 ---
