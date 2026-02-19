@@ -21,15 +21,9 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 ---
 
-## 📊 Stats
+## 📊 Write-up Stats
 
-| Total Writeups | Platforms | 
-|---|---|
-| {{ writeups.size }} | {% assign platforms = writeups | map: "platform" | uniq %}{{ platforms | join: ", " }} |
-
-**[Browse All Writeups](browse/)** — searchable index with filters.
-
----
+**{{ writeups.size }} writeups and counting!** [Browse them all →](browse/)
 
 {% if featured.size > 0 %}
 ## ⭐ Featured Writeups
