@@ -14,7 +14,7 @@ layout: null
     "date_created": {{ item.date_created | default: item.date | default: "" | jsonify }},
     "featured": {{ item.featured | default: false | jsonify }},
     "tags": {{ item.tags | default: "" | jsonify }},
-    "url": {{ item.url | jsonify }}
+    "url": {{ item.url | relative_url | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
