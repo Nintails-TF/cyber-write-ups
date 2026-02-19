@@ -1,6 +1,16 @@
 ---
 date created: Tuesday, February 17th 2026, 6:20:07 pm
 date modified: Tuesday, February 17th 2026, 6:21:24 pm
+title: ""
+platform: ""
+category: ""
+difficulty: ""
+os: ""
+featured: false
+tags: []
+layout: default
+date created: Thursday, February 19th 2026, 1:04:18 pm
+date modified: Thursday, February 19th 2026, 1:05:49 pm
 ---
 # PicoGym: [Challenge Name]
 
