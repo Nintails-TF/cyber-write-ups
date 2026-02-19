@@ -11,9 +11,6 @@ featured: false
 tags: []
 
 ---
-
-<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
-
 # PicoGym - Riddle Registry:
 
 **Category:** *Forensics*
