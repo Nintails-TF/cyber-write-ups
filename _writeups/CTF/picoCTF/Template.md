@@ -12,6 +12,8 @@ layout: default
 date created: Thursday, February 19th 2026, 1:04:18 pm
 date modified: Thursday, February 19th 2026, 1:05:49 pm
 ---
+<a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
+
 # PicoGym: [Challenge Name]
 
 **Category:** Web / Forensics / Crypto / Pwn / Reverse / Misc  
