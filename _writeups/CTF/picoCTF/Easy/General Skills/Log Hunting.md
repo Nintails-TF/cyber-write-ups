@@ -1,11 +1,13 @@
 ---
-layout: default
-title: Log Hunting
-category: General Skills
-event: PicoGym
-difficulty: Easy
-date: 2026-02-17
-type: CTF
+title: "Log Hunting"
+platform: "PicoGym"
+category: "General Skills"
+difficulty: "Easy"
+os: "Linux"
+featured: true
+tags: []
+date created: Tuesday, February 17th 2026, 6:04:46 pm
+date modified: Thursday, February 19th 2026, 1:47:38 pm
 ---
 
 <a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>

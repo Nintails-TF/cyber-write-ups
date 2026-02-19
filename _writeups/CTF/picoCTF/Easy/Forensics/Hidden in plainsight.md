@@ -1,13 +1,13 @@
 ---
 date created: Tuesday, February 17th 2026, 9:55:45 pm
 date modified: Tuesday, February 17th 2026, 10:55:16 pm
-layout: default
-title: Hidden in Plainsight
-category: Forensics
-event: PicoGym
-difficulty: Easy
-date: 2026-02-17
-type: CTF
+title: "Hidden in Plainsight"
+platform: "PicoGym"
+category: "Forensics"
+difficulty: "Easy"
+os: "Linux"
+featured: false
+tags: []
 ---
 
 <a href="{{ site.baseurl }}/" class="btn-home">← Back to Home</a>
