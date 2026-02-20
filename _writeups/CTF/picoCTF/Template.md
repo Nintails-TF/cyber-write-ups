@@ -7,8 +7,8 @@ difficulty: ""
 os: ""
 featured: false
 tags: []
-date created: Tuesday, February 17th 2026, 6:20:07 pm
-date modified: Thursday, February 19th 2026, 8:52:50 pm
+date_created: Tuesday, February 17th 2026, 6:20:07 pm
+date_modified: Friday, February 20th 2026, 2:37:52 pm
 ---
 
 # PicoGym: [Challenge Name]

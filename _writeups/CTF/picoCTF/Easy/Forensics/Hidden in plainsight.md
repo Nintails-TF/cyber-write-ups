@@ -1,14 +1,14 @@
 ---
-date created: Tuesday, February 17th 2026, 9:55:45 pm
-date modified: Tuesday, February 17th 2026, 10:55:16 pm
-title: "Hidden in Plainsight"
+title: Hidden in Plainsight
 layout: default
-platform: "PicoGym"
-category: "Forensics"
-difficulty: "Easy"
-os: "Linux"
+platform: PicoGym
+category: Forensics
+difficulty: Easy
+os: Linux
 featured: false
 tags: []
+date_created: Tuesday, February 17th 2026, 9:55:45 pm
+date_modified: Friday, February 20th 2026, 2:37:46 pm
 ---
 
 # PicoGym: Hidden in Plainsight

@@ -1,14 +1,14 @@
 ---
-title: "Log Hunting"
+title: Log Hunting
 layout: default
-platform: "PicoGym"
-category: "General Skills"
-difficulty: "Easy"
-os: "Linux"
+platform: PicoGym
+category: General Skills
+difficulty: Easy
+os: Linux
 featured: true
 tags: []
-date created: Tuesday, February 17th 2026, 6:04:46 pm
-date modified: Thursday, February 19th 2026, 3:04:55 pm
+date_created: Tuesday, February 17th 2026, 6:04:46 pm
+date_modified: Friday, February 20th 2026, 2:37:30 pm
 ---
 
 # PicoGym - Log Hunting:

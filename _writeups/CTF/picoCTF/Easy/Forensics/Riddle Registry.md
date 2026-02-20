@@ -1,6 +1,4 @@
 ---
-date created: Tuesday, February 17th 2026, 9:11:39 pm
-date modified: Tuesday, February 17th 2026, 10:19:20 pm
 layout: default
 title: Riddle Registry
 platform: PicoGym
@@ -9,8 +7,10 @@ difficulty: Easy
 os: Linux
 featured: false
 tags: []
-
+date_created: Tuesday, February 17th 2026, 9:11:39 pm
+date_modified: Friday, February 20th 2026, 2:37:36 pm
 ---
+
 # PicoGym - Riddle Registry:
 
 **Category:** *Forensics*
