@@ -12,6 +12,7 @@ layout: null
     "difficulty": {{ item.difficulty | jsonify }},
     "os": {{ item.os | default: "" | jsonify }},
     "date": {{ item.date | default: "" | jsonify }},
+    "date_created": {{ item.date_created | default: item.date | default: "" | jsonify }},
     "featured": {{ item.featured | default: false | jsonify }},
     "tags": {{ item.tags | default: "" | jsonify }},
     "url": {{ item.url | prepend: site.baseurl | jsonify }}
