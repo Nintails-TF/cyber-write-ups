@@ -30,7 +30,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 | Title | Platform | Category | Difficulty | Date |
 |---|---|---|---|---|
-{% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date | date: "%d/%m/%Y" }} |
+{% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date_created | date: "%d/%m/%Y" }} |
 {% endfor %}
 
 ---
@@ -40,7 +40,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 | Title | Platform | Category | Difficulty | Date |
 |---|---|---|---|---|
-{% for item in sorted limit:3 %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date | date: "%d/%m/%Y" }} |
+{% for item in sorted limit:3 %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date_created | date: "%d/%m/%Y" }} |
 {% endfor %}
 
 ---
