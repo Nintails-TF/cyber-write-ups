@@ -275,17 +275,24 @@ title: Writeup Index
     });
   }
 
-  function parseDate(str) {
-    if (!str) return 0;
-    // Try DD-MM-YYYY
-    const dmy = str.match(/^(\d{2})-(\d{2})-(\d{4})$/);
-    if (dmy) return new Date(dmy[3], dmy[2] - 1, dmy[1]).getTime();
-    // Try YYYY-MM-DD
-    const ymd = str.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    if (ymd) return new Date(ymd[1], ymd[2] - 1, ymd[3]).getTime();
-    // Try Obsidian long format
-    return new Date(str).getTime() || 0;
+function parseDate(str) {
+  if (!str) return 0;
+  // Try DD-MM-YYYY
+  const dmy = str.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+  if (dmy) return new Date(dmy[3], dmy[2] - 1, dmy[1]).getTime();
+  // Try YYYY-MM-DD
+  const ymd = str.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (ymd) return new Date(ymd[1], ymd[2] - 1, ymd[3]).getTime();
+  // Try DD/MM/YY or DD/MM/YYYY
+  const slash = str.match(/^(\d{2})\/(\d{2})\/(\d{2,4})$/);
+  if (slash) {
+    const year = slash[3].length === 2 ? '20' + slash[3] : slash[3];
+    return new Date(year, slash[2] - 1, slash[1]).getTime();
   }
+  // Fallback: strip ordinal suffixes (1st, 2nd, 3rd, 19th) then parse
+  const cleaned = str.replace(/(\d+)(st|nd|rd|th)/g, '$1');
+  return new Date(cleaned).getTime() || 0;
+}
 
   function diffBadge(d) {
     if (!d) return '';
