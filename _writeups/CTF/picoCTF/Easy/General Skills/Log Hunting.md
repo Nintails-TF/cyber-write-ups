@@ -1,5 +1,4 @@
 ---
-date: 17/02/26
 title: Log Hunting
 layout: default
 platform: PicoGym

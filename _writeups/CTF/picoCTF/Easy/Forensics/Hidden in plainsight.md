@@ -1,5 +1,4 @@
 ---
-date: 18/02/26
 title: Hidden in Plainsight
 layout: default
 platform: PicoGym

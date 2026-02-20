@@ -1,5 +1,4 @@
 ---
-date: 17/02/26
 layout: default
 title: Riddle Registry
 platform: PicoGym
