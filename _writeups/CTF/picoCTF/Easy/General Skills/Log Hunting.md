@@ -1,4 +1,5 @@
 ---
+date: 17/02/26
 title: Log Hunting
 layout: default
 platform: PicoGym
@@ -8,7 +9,7 @@ os: Linux
 featured: true
 tags: []
 date_created: Tuesday, February 17th 2026, 6:04:46 pm
-date_modified: Friday, February 20th 2026, 2:37:30 pm
+date_modified: Friday, February 20th 2026, 2:44:45 pm
 ---
 
 # PicoGym - Log Hunting:

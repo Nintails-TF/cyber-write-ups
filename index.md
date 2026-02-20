@@ -28,9 +28,9 @@ I'm Alex, developing both my Blue and Red teaming skills.
 {% if featured.size > 0 %}
 ## ⭐ Featured Writeups
 
-| Title | Platform | Category | Difficulty |
+| Title | Platform | Category | Difficulty | Date |
 |---|---|---|---|
-{% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} |
+{% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date }} |
 {% endfor %}
 
 ---
@@ -40,7 +40,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 
 | Title | Platform | Category | Difficulty | Date |
 |---|---|---|---|---|
-{% for item in sorted limit:3 %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date_created }} |
+{% for item in sorted limit:3 %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date }} |
 {% endfor %}
 
 ---

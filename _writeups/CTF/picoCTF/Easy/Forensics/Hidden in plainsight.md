@@ -1,4 +1,5 @@
 ---
+date: 18/02/26
 title: Hidden in Plainsight
 layout: default
 platform: PicoGym
@@ -8,7 +9,7 @@ os: Linux
 featured: false
 tags: []
 date_created: Tuesday, February 17th 2026, 9:55:45 pm
-date_modified: Friday, February 20th 2026, 2:37:46 pm
+date_modified: Friday, February 20th 2026, 2:45:26 pm
 ---
 
 # PicoGym: Hidden in Plainsight

@@ -1,4 +1,5 @@
 ---
+date: 17/02/26
 layout: default
 title: Riddle Registry
 platform: PicoGym
@@ -8,7 +9,7 @@ os: Linux
 featured: false
 tags: []
 date_created: Tuesday, February 17th 2026, 9:11:39 pm
-date_modified: Friday, February 20th 2026, 2:37:36 pm
+date_modified: Friday, February 20th 2026, 2:44:43 pm
 ---
 
 # PicoGym - Riddle Registry:
