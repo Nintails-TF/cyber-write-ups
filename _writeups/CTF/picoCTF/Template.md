@@ -8,15 +8,16 @@ os: ""
 featured: false
 tags: []
 date created: Tuesday, February 17th 2026, 6:20:07 pm
-date modified: Thursday, February 19th 2026, 6:56:45 pm
+date modified: Thursday, February 19th 2026, 8:52:50 pm
 ---
+
 # PicoGym: [Challenge Name]
 
 **Category:** Web / Forensics / Crypto / Pwn / Reverse / Misc  
 **Difficulty:** Easy / Medium / Hard  
 **Date:** 2025-02-17
 
----
+***
 
 ## Description:
 
@@ -25,18 +26,9 @@ date modified: Thursday, February 19th 2026, 6:56:45 pm
 **Files provided:** `challenge.zip`, `source.c` (if any)  
 **URL:** http://challenge-url (if applicable)
 
----
+***
 
-## Approach:
-
-What was your initial thinking when you read the challenge? What category tricks
-or techniques did it make you think of?
-
----
-
-## Solution:
-
-### Step 1 - Initial Recon:
+## Initial Reconnaissance:
 
 What did you look at first? (file, source, website, binary, etc.)
 ```bash
@@ -45,11 +37,11 @@ file challenge
 strings challenge
 ```
 
-### Step 2: Finding the Vulnerability / Key Insight:
+## Step 2: Finding the Vulnerability / Key Insight:
 
 What was the "aha" moment? This is the most valuable part of a writeup.
 
-### Step 3: Exploitation / Solving:
+## Step 3: Exploitation / Solving:
 
 Walk through exactly what you did step by step.
 ```python
