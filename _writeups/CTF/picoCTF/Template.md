@@ -9,7 +9,8 @@ os: ""
 featured: false
 tags: []
 date_created: Tuesday, February 17th 2026, 6:20:07 pm
-date_modified: Friday, February 20th 2026, 2:42:29 pm
+date_modified: Friday, February 20th 2026, 2:57:57 pm
+published: "false"
 ---
 
 # PicoGym: [Challenge Name]
