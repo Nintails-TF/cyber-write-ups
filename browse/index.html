@@ -262,7 +262,7 @@ title: Writeup Index
         return sortAsc ? va - vb : vb - va;
       }
 
-      if (sortKey === 'date_created') {
+      if (sortKey === 'date') {
         // Handle DD-MM-YYYY or YYYY-MM-DD
         const da = parseDate(a.date_created);
         const db = parseDate(b.date_created);
