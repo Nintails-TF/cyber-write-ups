@@ -19,7 +19,7 @@ date_modified: Friday, February 20th 2026, 2:44:43 pm
 
 **Difficulty:** *Easy* 
 
-**Date:** *17-02-2026*
+**Date:** *17/02/2026*
 
 ---
 
