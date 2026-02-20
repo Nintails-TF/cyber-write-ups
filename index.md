@@ -29,7 +29,7 @@ I'm Alex, developing both my Blue and Red teaming skills.
 ## ⭐ Featured Writeups
 
 | Title | Platform | Category | Difficulty | Date |
-|---|---|---|---|
+|---|---|---|---|---|
 {% for item in featured %}| [{{ item.title }}]({{ item.url | relative_url }}) | {{ item.platform }} | {{ item.category }} | {{ item.difficulty }} | {{ item.date }} |
 {% endfor %}
 
